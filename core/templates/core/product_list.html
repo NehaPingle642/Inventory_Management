@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+<body>
+    <!-- 🌟 Navbar -->
+    <nav class="navbar">
+        <div class="navbar-title">Inventory Manager</div>
+        <a href="{% url 'product_list' %}" class="nav-link">Home</a>
+        <a href="{% url 'add_product' %}" class="nav-link">➕ Add Product</a>
+    </nav>
+
+    <!-- 🧾 Product List -->
+    <div class="container">
+        <h2>Product List</h2>
+        <ul>
+            {% for product in products %}
+            <li>
+                <span>
+                    <strong>{{ product.name }}</strong> — ₹{{ product.price }} — Stock: {{ product.quantity }}
+                </span>
+                <span class="actions">
+                    <a href="{% url 'edit_product' product.pk %}" class="edit">✏️ Edit</a> |
+                    <a href="{% url 'delete_product' product.pk %}" class="delete">❌ Delete</a>
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

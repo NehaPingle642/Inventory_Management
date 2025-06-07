@@ -1,0 +1,99 @@
+body {
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-left: 6px solid #2196F3;
+    background: #f0f8ff;
+    border-radius: 8px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+li:hover {
+    background-color: #e3f2fd;
+}
+
+li span {
+    flex: 1;
+}
+
+.actions a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.actions .edit {
+    color: #FF9800;
+}
+
+.actions .delete {
+    color: #F44336;
+}
+
+.actions .edit:hover {
+    color: #e65100;
+}
+
+.actions .delete:hover {
+    color: #b71c1c;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: #444;
+    text-decoration: none;
+}
